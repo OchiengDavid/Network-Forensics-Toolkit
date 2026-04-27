@@ -41,3 +41,15 @@ Located in `Scripts/dns_analyzer.py`, this tool extracts all unique DNS queries 
 - [ ] Phase 2: HTTP Payload Extraction (Detecting malicious .zip/ .exe downloads).
 - [ ] Phase 3: Memory Forensics Integration (Volatility 3 correlation).
 
+## Live Simulation & Validation
+To validate the toolkit, I simulated a "Detonation" in a controlled VMware environment.
+
+### Results
+- **Victim (Defender):** Ubuntu 24.04
+- **C2 Node (Attacker):** Kali Linux
+- **Finding:** Upon triggering a connection to `screenshot.photos`, the `dns_analyzer.py` tool instantly flagged the traffic.
+
+![Live Detection Proof](Simulated_Analysis_Output.png)
+
+> **Forensic Note:** The tool successfully identified the C2 heartbeat despite the malicious infrastructure being simulated as offline. This proves the tool's effectiveness in early-stage triage.
+
