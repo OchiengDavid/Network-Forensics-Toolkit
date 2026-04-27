@@ -52,4 +52,13 @@ To validate the toolkit, I simulated a "Detonation" in a controlled VMware envir
 ![Live Detection Proof](Simulated_Analysis_Output.png)
 
 > **Forensic Note:** The tool successfully identified the C2 heartbeat despite the malicious infrastructure being simulated as offline. This proves the tool's effectiveness in early-stage triage.
+### Threat Intelligence Verification
+To confirm the malicious nature of the identified IoC (`screenshot.photos`), I cross-referenced the domain with global threat feeds:
+
+- **VirusTotal:** 50+ vendors flagged this domain as malicious.
+- **Classification:** Categorized as **DarkGate Command & Control (C2)**.
+- **Evidence:** [Threat_Intelligence Proof](Threat_Intelligence.png)
+
+
+
 
