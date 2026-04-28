@@ -1,9 +1,9 @@
 from scapy.all import rdpcap, DNSQR
 
 def extract_dns(pcap_path):
-    print(f"--- 🔍 Analyzing DarkGate Traffic: {pcap_path} ---")
+    print(f"--- Analyzing DarkGate Traffic: {pcap_path} ---")
     try:
-        # This loads the packets from your Evidences folder
+        # This loads the packets from the  Evidences folder
         packets = rdpcap(pcap_path)
         domains = set()
 
@@ -21,5 +21,5 @@ def extract_dns(pcap_path):
         print(f" [!] Error: {e}. Check if the file is in the 'Evidences' folder.")
 
 if __name__ == "__main__":
-    # Pointing to your specific folder structure
+    # Pointing to the specific folder structure
     extract_dns("Evidences/darkgate.pcap")
