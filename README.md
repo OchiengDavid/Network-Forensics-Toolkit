@@ -59,6 +59,13 @@ To confirm the malicious nature of the identified IoC (`screenshot.photos`), I c
 - **Classification:** Categorized as **DarkGate Command & Control (C2)**.
 - **Evidence:** [Threat_Intelligence Proof](Threat_Intelligence.png)
 
+### New Feature: Persistent Forensic Logging
+The toolkit now features a **CSV-based logging engine**. This ensures that all identified threats are preserved with full "Chain of Custody" details for later investigation.
+
+- **Automated Logging:** Saves Timestamp, Source IP, Domain, and Severity to `network_evidence.csv`.
+- **SIEM Ready:** The output format is compatible with professional tools like Splunk and Microsoft Sentinel.
+- **Live Validation:** Tested in a VMware lab environment with real-time alerting.
+
 
 
 

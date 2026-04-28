@@ -21,5 +21,5 @@ def extract_dns(pcap_path):
         print(f" [!] Error: {e}. Check if the file is in the 'Evidences' folder.")
 
 if __name__ == "__main__":
-    # Pointing to the specific folder structure
+    # Pointing to the specific folder structure and file name for consistency with http_hunter.py
     extract_dns("Evidences/darkgate.pcap")

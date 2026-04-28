@@ -1,7 +1,7 @@
 from scapy.all import rdpcap, TCP, Raw
 
 def analyze_http_pcap(file_path):
-    print(f"--- 🔍 Extracting HTTP Payloads from: {file_path} ---")
+    print(f"--- Extracting HTTP Payloads from: {file_path} ---")
     try:
         packets = rdpcap(file_path)
         found_payloads = 0
@@ -28,5 +28,5 @@ def analyze_http_pcap(file_path):
         print(f" [!] Error reading file: {e}")
 
 if __name__ == "__main__":
-    # Ensure this matches the file name in your Evidences folder
+    # Should match the filename in the Evidences folder and the one used in dns_analyzer.py for consistency
     analyze_http_pcap("Evidences/darkgate.pcap")
